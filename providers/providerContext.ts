@@ -7,12 +7,18 @@ import { gofileExtracter } from "./gofileExtracter";
 import { superVideoExtractor } from "./superVideoExtractor";
 import { gdFlixExtracter } from "./gdflixExtractor";
 import { ProviderContext } from "./types";
-import Aes from "react-native-aes-crypto";
+import * as crypto from "crypto";
 
 /**
  * Context for provider functions.
  * This context is used to pass common dependencies to provider functions.
  */
+
+const Aes = {
+  sha1: async (input: string): Promise<string> => {
+    return crypto.createHash('sha1').update(input).digest('hex');
+  }
+};
 
 const extractors = {
   hubcloudExtracter,
