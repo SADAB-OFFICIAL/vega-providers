@@ -21,23 +21,24 @@
     "watch:dev": "nodemon --watch providers --ext ts --exec \"npm run build\" & npm run dev",
     "dev:auto": "concurrently \"nodemon --watch providers --ext ts --exec \\\"npm run build:dev\\\"\" \"npm run dev\"",
     "auto": "node auto-dev.js",
-    "start": "npm run build && npm run dev"
-  },
-  "devDependencies": {
-    "@types/cheerio": "^0.22.35",
-    "@types/node": "^24.0.1",
-    "concurrently": "^8.2.2",
-    "cors": "^2.8.5",
-    "cross-env": "^7.0.3",
-    "express": "^4.21.2",
-    "nodemon": "^3.1.10",
-    "terser": "^5.43.1",
-    "typescript": "^5.8.3"
+    "start": "node server.js",
+    "vercel-build": "npm run build"
   },
   "dependencies": {
     "axios": "^1.10.0",
     "cheerio": "^1.1.0",
     "rimraf": "^6.0.1",
-    "zod": "^4.0.2"
+    "zod": "^4.0.2",
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.35",
+    "@types/node": "^24.0.1",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.10",
+    "terser": "^5.43.1",
+    "typescript": "^5.8.3"
   }
 }

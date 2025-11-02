@@ -1,0 +1,16 @@
+node_modules
+.replit
+.git
+.gitignore
+providers
+tsconfig.json
+*.ts
+test-*.js
+auto-dev.js
+dev-server.js
+interactive-test.js
+test-config.js
+nodemon.json
+README.md
+replit.md
+/tmp
