@@ -124,7 +124,8 @@ const express = require('express');
     });
 
     // Start the server
-    app.listen(port, 'localhost', () => {
-        console.log(`✅ Public API server is running and listening on http://localhost:${port}!`);
+    app.listen(port, '0.0.0.0', () => {
+        console.log(`✅ Public API server is running and listening on http://0.0.0.0:${port}!`);
+        console.log(`🌐 Access your API at: https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`);
     });
     
